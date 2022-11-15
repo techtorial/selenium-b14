@@ -14,7 +14,7 @@ public class LocatorsIntro {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.navigate().to("file:///Users/techtorialacademy/Desktop/Techtorialhtml.html");
+        driver.navigate().to("file:///Users/techtorial/Documents/Techtorialhtml.html");
         WebElement header=driver.findElement(By.id("techtorial1"));
         System.out.println(header.getText());
         String actualHeader=header.getText().trim();
@@ -51,5 +51,40 @@ public class LocatorsIntro {
         seleniumBox.click();
         System.out.println(seleniumBox.isSelected());//false
 
+        //LOCATOR:TagName
+        WebElement javaVersion=driver.findElement(By.tagName("u"));
+        String actualVersion=javaVersion.getText().trim();
+        String expectedVersion="Use Java Version";
+        if(actualVersion.equals(expectedVersion)){
+            System.out.println("The version is correct");
+        }else{
+            System.out.println("The version is incorrect");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
