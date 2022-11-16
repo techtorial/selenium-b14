@@ -16,7 +16,7 @@ public class FindElementsMethod {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("file:///Users/techtorial/Documents/Techtorialhtml.html");
-        List<WebElement> allBoxes=driver.findElements(By.xpath("//input[@type='checkbox']"));
+        List<WebElement> allBoxes=driver.findElements(By.xpath("//input[@type='rerer']"));
         for(WebElement box:allBoxes){
             if(box.isDisplayed()&&box.isEnabled()&&!box.isSelected()){
                 Thread.sleep(1000);
