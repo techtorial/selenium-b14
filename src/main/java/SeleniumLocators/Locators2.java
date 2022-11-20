@@ -50,6 +50,8 @@ public class Locators2 {
         WebElement restApi=driver.findElement(By.partialLinkText("Rest"));
         restApi.click();
         System.out.println(driver.getTitle());
-
+        driver.navigate().back();
+        java=driver.findElement(By.linkText("Java"));
+        java.click();
     }
 }
