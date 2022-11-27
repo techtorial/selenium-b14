@@ -60,6 +60,7 @@ public class SelectBasics {
         BrowserUtils.selectBy(countries,"3","index");
         Select country=new Select(countries);
         country.deselectByValue("3");
-        country.deselectAll();
+        country.deselectAll()
+        ;
     }
 }

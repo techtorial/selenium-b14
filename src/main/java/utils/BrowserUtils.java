@@ -46,7 +46,6 @@ public class BrowserUtils {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true)", element);
     }
-
     public static void switchById(WebDriver driver) {
         String mainPageId = driver.getWindowHandle();
         Set<String> allPagesId = driver.getWindowHandles();
