@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import utils.DriverHelper;
 
 import java.time.Duration;
 
@@ -13,17 +14,14 @@ public class TestBase {
 
    public WebDriver driver;
 
-    @BeforeClass
+    @BeforeMethod
     public void setup(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver= DriverHelper.getDriver();
         driver.get("http://demo.sentrifugo.com/index.php/");
     }
 
     @AfterMethod
     public void tearDown(){
-        driver.quit();
+       // driver.quit();
     }
 }

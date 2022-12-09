@@ -3,6 +3,7 @@ package SoftAssertt;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.DriverHelper;
 
 public class SoftAssertIntro {
 
@@ -21,7 +22,6 @@ public class SoftAssertIntro {
         System.out.println("test3");
         Assert.assertEquals(getSum(2,7),9);
         System.out.println("test4");
-
     }
     @Test
     public void test2(){

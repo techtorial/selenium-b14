@@ -26,7 +26,7 @@ public class NestedFrame {
         driver.switchTo().frame("frame-left");
         WebElement text=driver.findElement(By.xpath("//body[contains(text(),'LEFT')]"));
         System.out.println(BrowserUtils.getText(text));
-        driver.switchTo().frame("frame-top");
+        driver.switchTo().parentFrame();
         driver.switchTo().frame("frame-middle");
         WebElement textMiddle=driver.findElement(By.xpath("//div[contains(text(),'MIDDLE')]"));
         System.out.println(BrowserUtils.getText(textMiddle));

@@ -12,23 +12,23 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class BackGroundTest {
+public class BackGroundTest  extends TestBase{
 
-    WebDriver driver;
+//    WebDriver driver;
 
-    @BeforeMethod
-    public void setup(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("http://demo.sentrifugo.com/index.php/");
-    }
+//    @BeforeMethod
+//    public void setup(){
+//        WebDriverManager.chromedriver().setup();
+//        driver=new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.get("http://demo.sentrifugo.com/index.php/");
+//    }
 
     @Test
     public void validateBackGroundCheck() throws InterruptedException {
-        LoginPage loginPage=new LoginPage(driver);
-        loginPage.login("EM01","sentrifugo");
+    //    LoginPage loginPage=new LoginPage(driver);
+     //   loginPage.login("EM01","sentrifugo");
         MainPage mainPage=new MainPage(driver);
         mainPage.clickBackground();
         BackGroundPage backGroundPage=new BackGroundPage(driver);
@@ -44,6 +44,6 @@ public class BackGroundTest {
 
     @AfterMethod
     public void tearDown(){
-        driver.quit();
+      //  driver.quit();
     }
 }

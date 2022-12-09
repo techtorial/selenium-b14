@@ -16,7 +16,7 @@ import java.time.Duration;
 
 public class LoginTest extends TestBase{
 
-    @Test
+    @Test(priority = 2)
     public void validatePositiveLogin(){
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver=new ChromeDriver();
@@ -28,7 +28,7 @@ public class LoginTest extends TestBase{
         Assert.assertEquals(loginPage.title(driver),"Sentrifugo - Open Source HRMS");
         Assert.assertEquals(driver.getTitle().trim(),"Sentrifugo - Open Source HRMS");
     }
-    @Test
+    @Test(priority = 1)
     public void validateNegativeLogin(){
 //        WebDriverManager.chromedriver().setup();
 //        WebDriver driver=new ChromeDriver();

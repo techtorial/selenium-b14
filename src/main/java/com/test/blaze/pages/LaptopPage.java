@@ -19,7 +19,8 @@ public class LaptopPage {
     // List<WebElement> allPages = driver.findElements(By.xpath("//a[@class='hrefch']"));
 
 
-    public void chooseLaptop(String brand){
+    public void chooseLaptop(String brand) throws InterruptedException {
+        Thread.sleep(3000);
         for(WebElement laptop:allLaptops){
             if(BrowserUtils.getText(laptop).contains(brand)){//in real job, .equals
                 laptop.click();

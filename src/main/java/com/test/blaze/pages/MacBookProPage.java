@@ -1,5 +1,6 @@
 package com.test.blaze.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,10 +23,23 @@ public class MacBookProPage {
     @FindBy(id = "myTabContent")
     WebElement productDescription;
 
+    @FindBy(linkText = "Add to cart")
+    WebElement addToCard;
+
     public void validateProductInfo(String expectedHeader,String expectedPrice,
     String expectedProductDescription){
         Assert.assertEquals(BrowserUtils.getText(header),expectedHeader);
         Assert.assertEquals(BrowserUtils.getText(price),expectedPrice);
         Assert.assertEquals(BrowserUtils.getText(productDescription),expectedProductDescription);
     }
+    public void clickAddToCardAndValidate(WebDriver driver,String expectedMessage) throws InterruptedException {
+        addToCard.click();
+        Thread.sleep(1000);
+        Alert alert=driver.switchTo().alert();
+        Assert.assertEquals(alert.getText(),expectedMessage);
+        alert.accept();
+    }
+
+
+
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Suite">
+
+<test name="Blaze Tests">
+
+   <classes>
+
+       <class name="com.test.blaze.tests.MacBookProTest"> </class>
+       <class name="com.test.blaze.tests.OrderTest"> </class>
+
+   </classes>
+
+</test>
+    <test name="sentrifugo Tests">
+
+        <classes>
+
+            <class name="com.test.sentrifugo.tests.LoginTest"> </class>
+            <class name="com.test.sentrifugo.tests.DepartmentTest"> </class>
+            <class name="com.test.sentrifugo.tests.BackGroundTest"> </class>
+
+        </classes>
+
+    </test>
+
+<!--    <test name="SelectPractice Tests">-->
+
+<!--        <classes>-->
+<!--            <class name="SelectClass.SelectBasics"> </class>-->
+<!--            <class name="SelectClass.SelectPractice"> </class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+
+<!--    <test name="IframePractice Tests">-->
+
+<!--        <classes>-->
+
+<!--            <class name="FrameAndIFrame.FramePractice"> </class>-->
+<!--            <class name="FrameAndIFrame.IframePractice"> </class>-->
+<!--            <class name="FrameAndIFrame.NestedFrame"> </class>-->
+
+<!--        </classes>-->
+
+<!--    </test>-->
+
+</suite>

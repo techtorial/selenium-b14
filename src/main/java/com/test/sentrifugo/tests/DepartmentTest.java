@@ -20,8 +20,8 @@ public class DepartmentTest extends TestBase {
 //        driver.manage().window().maximize();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        driver.get("http://demo.sentrifugo.com/index.php/");
-        LoginPage loginPage=new LoginPage(driver);
-        loginPage.login("EM01","sentrifugo");
+      //  LoginPage loginPage=new LoginPage(driver);
+      //  loginPage.login("EM01","sentrifugo");
         MainPage mainPage=new MainPage(driver);
         mainPage.clickDepartment();
         DepartmentPage departmentPage=new DepartmentPage(driver);
