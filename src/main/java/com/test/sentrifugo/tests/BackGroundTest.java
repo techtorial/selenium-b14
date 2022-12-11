@@ -27,8 +27,8 @@ public class BackGroundTest  extends TestBase{
 
     @Test
     public void validateBackGroundCheck() throws InterruptedException {
-    //    LoginPage loginPage=new LoginPage(driver);
-     //   loginPage.login("EM01","sentrifugo");
+     //  LoginPage loginPage=new LoginPage(driver);
+    //    loginPage.login("EM01","sentrifugo");
         MainPage mainPage=new MainPage(driver);
         mainPage.clickBackground();
         BackGroundPage backGroundPage=new BackGroundPage(driver);

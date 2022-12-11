@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Regression Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Blaze Tests(failed)">
+  <test thread-count="5" name="sentrifugo Tests(failed)">
     <classes>
-      <class name="com.test.blaze.tests.OrderTest">
+      <class name="com.test.sentrifugo.tests.BackGroundTest">
         <methods>
           <include name="tearDown"/>
+          <include name="validateBackGroundCheck"/>
           <include name="setup"/>
-          <include name="validateOrderMessage"/>
         </methods>
-      </class> <!-- com.test.blaze.tests.OrderTest -->
+      </class> <!-- com.test.sentrifugo.tests.BackGroundTest -->
+      <class name="com.test.sentrifugo.tests.DepartmentTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="valitadeMessageForEmployeeCreation"/>
+        </methods>
+      </class> <!-- com.test.sentrifugo.tests.DepartmentTest -->
     </classes>
-  </test> <!-- Blaze Tests(failed) -->
+  </test> <!-- sentrifugo Tests(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->
